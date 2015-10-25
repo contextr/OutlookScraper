@@ -30,7 +30,7 @@ public class Main implements CommandLineRunner {
 
 	public void run(String... args) throws Exception {
 
-		args = new String[] { "barry_tycholiz_000_1_1.pst", "Enron", "output" };
+//		args = new String[] { "barry_tycholiz_000_1_1.pst", "Enron", "output" };
 
 		if (args.length != 3) {
 			helpAndQuit();
@@ -66,7 +66,7 @@ public class Main implements CommandLineRunner {
 		depth++;
 		// the root folder doesn't have a display name
 		if (depth > 0) {
-			System.out.println("POPOPOPOP" + folder.getDisplayName());
+			System.out.println(folder.getDisplayName());
 		}
 
 		// go through the folders...
@@ -101,9 +101,6 @@ public class Main implements CommandLineRunner {
 				if (!body.isEmpty()) {
 					PersistModel p = new PersistModel(profileName, body);
 					if (!list.contains(p)) {
-						System.out.println("+VV+");
-						System.out.println(body);
-						System.out.println("+^^+");
 						list.add(p);
 					}
 				}
